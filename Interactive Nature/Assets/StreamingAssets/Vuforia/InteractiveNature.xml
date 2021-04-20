@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="Super" size="1.000000 0.858800" />
+    <ImageTarget name="NewYork" size="1.000000 1.326980" />
+    <ImageTarget name="Monke" size="1.000000 1.085150" />
+    <ImageTarget name="Birdie" size="1.000000 1.003202" />
+    <ImageTarget name="Doreamon" size="1.000000 1.218874" />
+    <ImageTarget name="Animals" size="1.000000 0.997988" />
+    <ImageTarget name="OnePiece" size="1.000000 1.098522" />
+    <ImageTarget name="BeardBoy" size="1.000000 1.365231" />
+  </Tracking>
+</QCARConfig>
