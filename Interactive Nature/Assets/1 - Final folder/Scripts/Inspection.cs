@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 public class Inspection : MonoBehaviour
 {
 
-    private GameObject myPlant;
+    public GameObject myPlant;
+    //public List<GameObject> Plants;
+    private bool plantInstantiated = false;
     void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
@@ -15,15 +17,16 @@ public class Inspection : MonoBehaviour
     public void ChangeObject(GameObject plantToRotate)
     {
         myPlant = plantToRotate;
+        myPlant.transform.parent = transform;
     }
 
     void Update()
     {
         if(SceneManager.GetActiveScene().name == "4 - Inspect Scene")
         {
-            transform.Find("Plane").gameObject.SetActive(true);
-            
-            myPlant.SetActive(true);
+            transform.position = GameObject.Find("Camera").transform.position;
+            myPlant.transform.position = GameObject.Find("PlantPosition").transform.position;
+            myPlant.AddComponent<MoveByTouch>();
         }
     }
 }
