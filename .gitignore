@@ -38,3 +38,4 @@ sysinfo.txt
 *.json
 *.json
 Interactive Nature/Packages/manifest.json
+Interactive Nature/Packages/packages-lock.json
