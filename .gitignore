@@ -35,3 +35,7 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+*.json
+*.json
+Interactive Nature/Packages/manifest.json
+Interactive Nature/Packages/packages-lock.json
