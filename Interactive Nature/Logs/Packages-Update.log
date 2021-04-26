@@ -70,3 +70,11 @@ Update Mode: resetToDefaultDependencies
 
 The following packages were removed:
   com.ptc.vuforia.engine@git+https://git-packages.developer.vuforia.com#9.8.5
+
+=== Mon Apr 26 12:45:14 2021
+
+Packages were changed.
+Update Mode: resetToDefaultDependencies
+
+The following packages were removed:
+  com.ptc.vuforia.engine@git+https://git-packages.developer.vuforia.com#9.8.5
