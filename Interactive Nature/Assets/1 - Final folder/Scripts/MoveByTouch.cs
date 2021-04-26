@@ -8,11 +8,18 @@ public class MoveByTouch : MonoBehaviour
     private float rotationRate = 0.1f;
     public float zoomMin = 1;
     public float zoomMax = 14;
+    public Camera camera;
+
+    private void Start()
+    {
+        camera = FindObjectOfType<Camera>();
+    }
 
     void Update()
     {
         if (Input.touchCount == 2)
         {
+            Debug.Log("Zoom initiated");
             Touch touch0 = Input.GetTouch(0);
             Touch touch1 = Input.GetTouch(1);
 
@@ -24,28 +31,30 @@ public class MoveByTouch : MonoBehaviour
 
             float difference = currMagnitude - prevMagnitude;
 
-            zoom(difference * 0.1f);
+            Debug.Log("Zoom size" + difference);
+
+
+            zoom(difference * 0.01f);
         }
         else if (Input.touchCount == 1)
         {
             // get the user touch input
             foreach (Touch touch in Input.touches)
             {
-                Debug.Log("Touching at: " + touch.position);
+                //Debug.Log("Touching at: " + touch.position);
 
                 if (touch.phase == TouchPhase.Began)
                 {
-                    Debug.Log("Touch phase began at: " + touch.position);
+                    //Debug.Log("Touch phase began at: " + touch.position);
                 }
                 else if (touch.phase == TouchPhase.Moved)
                 {
-                    Debug.Log("Touch phase Moved");
-                    transform.Rotate(touch.deltaPosition.y * rotationRate,
-                                     -touch.deltaPosition.x * rotationRate, 0, Space.World);
+                    //Debug.Log("Touch phase Moved");
+                    transform.Rotate(touch.deltaPosition.y * rotationRate,-touch.deltaPosition.x * rotationRate, 0, Space.World);
                 }
                 else if (touch.phase == TouchPhase.Ended)
                 {
-                    Debug.Log("Touch phase Ended");
+                    //Debug.Log("Touch phase Ended");
                 }
             }
         }
@@ -54,7 +63,7 @@ public class MoveByTouch : MonoBehaviour
 
     void zoom(float increment)
     {
-        Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize - increment, zoomMin, zoomMax);
+        camera.orthographicSize = Mathf.Clamp(camera.orthographicSize - increment, zoomMin, zoomMax);
     }
 
 }

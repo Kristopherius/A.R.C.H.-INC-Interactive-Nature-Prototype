@@ -47,7 +47,7 @@ public class Inspection : MonoBehaviour
                 {
                     child.gameObject.SetActive(true);
                     child.transform.position = GameObject.Find("PlantPosition").transform.position;
-                    child.transform.localScale = new Vector3(20f, 20f, 20f);
+                    child.transform.localScale = new Vector3(25f, 25f, 25f);
                     child.gameObject.AddComponent<MoveByTouch>();
                 }
             }
