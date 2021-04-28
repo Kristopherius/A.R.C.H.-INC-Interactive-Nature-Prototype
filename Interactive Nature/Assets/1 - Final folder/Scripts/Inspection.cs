@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class Inspection : MonoBehaviour
 {
-    // part of testing the SaveSystem.
-    public int varA;
 
     public GameObject myPlant;
     private GameObject otherInspect;
@@ -31,8 +29,6 @@ public class Inspection : MonoBehaviour
 
     void Update()
     {
-        // part of testing the SaveSystem.
-        varA = PlayerPrefs.GetInt("verbena");
         
         if (SceneManager.GetActiveScene().name == "3 - Base Scene" && transform.childCount <= 0)
         {
