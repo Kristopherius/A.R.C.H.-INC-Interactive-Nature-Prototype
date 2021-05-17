@@ -5,9 +5,9 @@ using UnityEngine;
 public class CameraTexture : MonoBehaviour
 {
     static WebCamTexture backCamera;
+    public static WebCamDevice targetCam;
     void Start()
     {
-       
         if (backCamera == null)
         {
             backCamera = new WebCamTexture();
