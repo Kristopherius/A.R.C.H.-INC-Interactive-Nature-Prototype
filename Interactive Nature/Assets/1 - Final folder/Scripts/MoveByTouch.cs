@@ -19,7 +19,7 @@ public class MoveByTouch : MonoBehaviour
     {
         if (Input.touchCount == 2)
         {
-            Debug.Log("Zoom initiated");
+            //Debug.Log("Zoom initiated");
             Touch touch0 = Input.GetTouch(0);
             Touch touch1 = Input.GetTouch(1);
 
