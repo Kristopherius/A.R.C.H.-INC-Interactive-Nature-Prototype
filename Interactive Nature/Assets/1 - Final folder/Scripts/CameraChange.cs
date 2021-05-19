@@ -11,7 +11,7 @@ public class CameraChange : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("Swiper page" + swiper.currentPage);
+        //Debug.Log("Swiper page" + swiper.currentPage);
         if (swiper.currentPage != 2)
         {
             ShowUIView();
@@ -25,7 +25,7 @@ public class CameraChange : MonoBehaviour
     {
         ARCamera.gameObject.SetActive(false);
         UICamera.gameObject.SetActive(true);
-        Debug.Log("UI should show");
+        //Debug.Log("UI should show");
     }
 
     // Call this function to enable AR camera,
@@ -34,6 +34,6 @@ public class CameraChange : MonoBehaviour
     {
         UICamera.gameObject.SetActive(false);
         ARCamera.gameObject.SetActive(true);
-        Debug.Log("AR should show");
+        //Debug.Log("AR should show");
     }
 }
