@@ -11,15 +11,15 @@ public class Inspection : MonoBehaviour
 
     private void Start()
     {
-        otherInspect = GameObject.Find("InspectManager");
+        /*otherInspect = GameObject.Find("InspectManager");
         if(otherInspect != this.gameObject)
         {
             Destroy(otherInspect);
-        }
+        }*/
     }
     void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
     }
 
     public void ChangeObject(GameObject plantToRotate)
@@ -29,7 +29,6 @@ public class Inspection : MonoBehaviour
 
     void Update()
     {
-        
         if (SceneManager.GetActiveScene().name == "3 - Base Scene" && transform.childCount <= 0)
         {
             if (myPlant != null) { Instantiate(myPlant, transform); }
