@@ -7,51 +7,66 @@ public class Inspection : MonoBehaviour
 {
 
     public GameObject myPlant;
-    private GameObject otherInspect;
-
-    private void Start()
-    {
-        otherInspect = GameObject.Find("InspectManager");
-        if(otherInspect != this.gameObject)
-        {
-            Destroy(otherInspect);
-        }
-    }
-    void Awake()
-    {
-        DontDestroyOnLoad(this.gameObject);
-    }
+    public Swiper swiper;
+    private float scale = 5f;
+    public bool inFocus;
 
     public void ChangeObject(GameObject plantToRotate)
     {
         myPlant = plantToRotate;
     }
 
+    public void Focused()
+    {
+        if (inFocus == true)
+        {
+            inFocus = false;
+        }
+        else
+        {
+            inFocus = true;
+        }            
+    }
+
     void Update()
     {
-        
-        if (SceneManager.GetActiveScene().name == "3 - Base Scene" && transform.childCount <= 0)
+        if (myPlant != null & transform.childCount <= 0)
         {
-            if (myPlant != null) { Instantiate(myPlant, transform); }
-
-
-            foreach (Transform child in transform)
+            Instantiate(myPlant, transform);
+            if (transform.childCount > 0)
             {
-                child.gameObject.SetActive(false);
-            }
-        }
-        if (SceneManager.GetActiveScene().name == "4 - Inspect Scene")
-        {
-            foreach (Transform child in transform)
-            {
-                if(child.GetComponent<MoveByTouch>() == null)
+                foreach (Transform child in transform)
                 {
-                    child.gameObject.SetActive(true);
-                    child.transform.position = GameObject.Find("PlantPosition").transform.position;
-                    child.transform.localScale = new Vector3(25f, 25f, 25f);
-                    child.gameObject.AddComponent<MoveByTouch>();
+                    if (child.GetComponent<MoveByTouch>() == null)
+                    {
+                        child.gameObject.SetActive(true);
+                        child.transform.position = GameObject.Find("PlantPosition").transform.position;
+                        child.transform.localScale = new Vector3(scale, scale, scale);
+                        child.gameObject.AddComponent<MoveByTouch>();
+                        child.gameObject.GetComponent<MoveByTouch>().enabled = false;
+                    }
                 }
             }
+            
         }
+
+        if(transform.childCount > 0)
+        {
+            if (inFocus)
+            {
+                if (transform.GetChild(0).GetComponent<MoveByTouch>() != null)
+                {
+                    Debug.Log("FOCUSED");
+                    swiper.enabled = false;
+                    transform.GetChild(0).gameObject.GetComponent<MoveByTouch>().enabled = true;
+                }
+            }
+            else
+            {
+                Debug.Log("NOT FOCUSED");
+                swiper.enabled = true;
+                transform.GetChild(0).gameObject.GetComponent<MoveByTouch>().enabled = false;
+            }
+        }        
     }
 }
