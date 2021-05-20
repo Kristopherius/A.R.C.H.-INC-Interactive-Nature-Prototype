@@ -8,8 +8,15 @@ public class Inspection : MonoBehaviour
 
     public GameObject myPlant;
     public Swiper swiper;
+
+    public Transform pointA, pointB;
+    public GameObject UIToMove;
+    float speed = 1f;
+
     private float scale = 5f;
+
     public bool inFocus;
+
 
     public void ChangeObject(GameObject plantToRotate)
     {
@@ -26,6 +33,21 @@ public class Inspection : MonoBehaviour
         {
             inFocus = true;
         }            
+    }
+
+
+    void FixedUpdate()
+    {
+        if (!inFocus)
+        {
+            speed = 10 * Time.deltaTime;
+            UIToMove.gameObject.transform.position = Vector3.Lerp(pointA.position, pointB.position, speed);
+        }
+        if (inFocus)
+        {
+            speed = 10 * Time.deltaTime;
+            UIToMove.gameObject.transform.position = Vector3.Lerp(pointB.position, pointA.position, speed);
+        }
     }
 
     void Update()
