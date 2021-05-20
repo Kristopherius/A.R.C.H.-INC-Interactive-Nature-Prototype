@@ -8,7 +8,7 @@ public class MoveByTouch : MonoBehaviour
     private float rotationRate = 0.1f;
     public float zoomMin = 1;
     public float zoomMax = 14;
-    public new Camera cam;
+    public Camera cam;
 
     private void Start()
     {
