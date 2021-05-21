@@ -6,13 +6,13 @@ public class MoveByTouch : MonoBehaviour
 {
 
     private float rotationRate = 0.1f;
-    public float zoomMin = 0.1f;
-    public float zoomMax = 6f;
-    public GameObject cam;
+    public float zoomMin = 1;
+    public float zoomMax = 14;
+    public Camera cam;
 
     private void Start()
     {
-        cam = GameObject.Find("InspectionCamera");
+        cam = FindObjectOfType<Camera>();
     }
 
     void Update()
@@ -49,7 +49,7 @@ public class MoveByTouch : MonoBehaviour
                 else if (touch.phase == TouchPhase.Moved)
                 {
                     //Debug.Log("Touch phase Moved");
-                    transform.Rotate(touch.deltaPosition.y * rotationRate,-touch.deltaPosition.x * rotationRate, 0, Space.World);
+                    transform.Rotate(touch.deltaPosition.y * rotationRate, -touch.deltaPosition.x * rotationRate, 0, Space.World);
                 }
                 else if (touch.phase == TouchPhase.Ended)
                 {
@@ -57,11 +57,12 @@ public class MoveByTouch : MonoBehaviour
                 }
             }
         }
-        
+
     }
+
     void zoom(float increment)
     {
-        cam.GetComponent<Camera>().orthographicSize = Mathf.Clamp(cam.GetComponent<Camera>().orthographicSize - increment, zoomMin, zoomMax);
+        cam.orthographicSize = Mathf.Clamp(cam.orthographicSize - increment, zoomMin, zoomMax);
     }
 
 }
