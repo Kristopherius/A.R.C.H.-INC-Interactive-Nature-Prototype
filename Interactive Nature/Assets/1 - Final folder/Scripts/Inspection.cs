@@ -21,6 +21,7 @@ public class Inspection : MonoBehaviour
     public void ChangeObject(GameObject plantToRotate)
     {
         myPlant = plantToRotate;
+        DeleteChild();
     }
 
     public void Focused()
@@ -35,6 +36,20 @@ public class Inspection : MonoBehaviour
         }            
     }
 
+    public void DeleteChild()
+    {
+        if (myPlant != null && transform.childCount > 0) 
+        {
+            if (myPlant.tag != transform.GetChild(0).tag)
+            {
+                foreach (Transform child in transform)
+                {
+                    GameObject.Destroy(child.gameObject);
+                }
+            }
+        }
+        
+    }
 
     void FixedUpdate()
     {
@@ -78,14 +93,14 @@ public class Inspection : MonoBehaviour
             {
                 if (transform.GetChild(0).GetComponent<MoveByTouch>() != null)
                 {
-                    Debug.Log("FOCUSED");
+                    //Debug.Log("FOCUSED");
                     swiper.enabled = false;
                     transform.GetChild(0).gameObject.GetComponent<MoveByTouch>().enabled = true;
                 }
             }
             else
             {
-                Debug.Log("NOT FOCUSED");
+                //Debug.Log("NOT FOCUSED");
                 swiper.enabled = true;
                 transform.GetChild(0).gameObject.GetComponent<MoveByTouch>().enabled = false;
             }

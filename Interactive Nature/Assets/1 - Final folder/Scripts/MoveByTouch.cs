@@ -6,13 +6,13 @@ public class MoveByTouch : MonoBehaviour
 {
 
     private float rotationRate = 0.1f;
-    public float zoomMin = 1;
-    public float zoomMax = 14;
-    public Camera cam;
+    public float zoomMin = 0.1f;
+    public float zoomMax = 6f;
+    public GameObject cam;
 
     private void Start()
     {
-        cam = FindObjectOfType<Camera>();
+        cam = GameObject.Find("InspectionCamera");
     }
 
     void Update()
@@ -59,10 +59,9 @@ public class MoveByTouch : MonoBehaviour
         }
         
     }
-
     void zoom(float increment)
     {
-        cam.orthographicSize = Mathf.Clamp(cam.orthographicSize - increment, zoomMin, zoomMax);
+        cam.GetComponent<Camera>().orthographicSize = Mathf.Clamp(cam.GetComponent<Camera>().orthographicSize - increment, zoomMin, zoomMax);
     }
 
 }
