@@ -17,10 +17,12 @@ public class Inspection : MonoBehaviour
 
     public bool inFocus;
 
+    public Quaternion initialRotation;
 
     public void ChangeObject(GameObject plantToRotate)
     {
         myPlant = plantToRotate;
+        initialRotation = myPlant.transform.rotation;
     }
 
     public void Focused()
@@ -90,5 +92,11 @@ public class Inspection : MonoBehaviour
                 transform.GetChild(0).gameObject.GetComponent<MoveByTouch>().enabled = false;
             }
         }
+    }
+
+    public void Reset()
+    {
+        Debug.Log("reset is pressed");
+        transform.GetChild(0).transform.rotation = initialRotation;
     }
 }
