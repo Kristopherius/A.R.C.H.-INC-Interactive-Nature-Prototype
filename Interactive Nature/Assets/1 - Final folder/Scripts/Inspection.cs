@@ -23,6 +23,7 @@ public class Inspection : MonoBehaviour
     {
         myPlant = plantToRotate;
         initialRotation = myPlant.transform.rotation;
+        DeleteChild();
     }
 
     public void Focused()
@@ -37,6 +38,20 @@ public class Inspection : MonoBehaviour
         }
     }
 
+    public void DeleteChild()
+    {
+        if (myPlant != null && transform.childCount > 0)
+        {
+            if (myPlant.tag != transform.GetChild(0).tag)
+            {
+                foreach (Transform child in transform)
+                {
+                    GameObject.Destroy(child.gameObject);
+                }
+            }
+        }
+
+    }
 
     void FixedUpdate()
     {
