@@ -24,18 +24,8 @@ public class Swiper : MonoBehaviour, IDragHandler, IEndDragHandler
     public void OnDrag(PointerEventData data)
     {
         float differenceX = data.pressPosition.x - data.position.x;
-
-        //float differenceY = data.pressPosition.y - data.position.y;
-
         transform.position = panelLocation - new Vector3(differenceX, 0, 0);
 
-        //if(currentPage == 1)
-        //{
-        //    CollPos = PlantCollection.transform.position;
-            
-        //}
-
-        //PlantCollection.transform.position = CollPos - new Vector3(0, differenceY, 0);
     }
     public void OnEndDrag(PointerEventData data)
     {
