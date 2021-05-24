@@ -6,20 +6,36 @@ using UnityEngine.EventSystems;
 public class Swiper : MonoBehaviour, IDragHandler, IEndDragHandler
 {
     private Vector3 panelLocation;
+    private Vector3 CollPos;
+
+    private GameObject PlantCollection;
+
     public float percentThreshold = 0.2f;
     public float easing = 0.5f;
     public int totalPages = 3;
-    public int currentPage = 1;
+    public int currentPage = 2;
 
     // Start is called before the first frame update
     void Start()
     {
         panelLocation = transform.position;
+        //PlantCollection = GameObject.Find("Plant Collection");
     }
     public void OnDrag(PointerEventData data)
     {
-        float difference = data.pressPosition.x - data.position.x;
-        transform.position = panelLocation - new Vector3(difference, 0, 0);
+        float differenceX = data.pressPosition.x - data.position.x;
+
+        //float differenceY = data.pressPosition.y - data.position.y;
+
+        transform.position = panelLocation - new Vector3(differenceX, 0, 0);
+
+        //if(currentPage == 1)
+        //{
+        //    CollPos = PlantCollection.transform.position;
+            
+        //}
+
+        //PlantCollection.transform.position = CollPos - new Vector3(0, differenceY, 0);
     }
     public void OnEndDrag(PointerEventData data)
     {
