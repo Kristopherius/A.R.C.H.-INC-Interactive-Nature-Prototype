@@ -34,6 +34,6 @@ public class CameraChange : MonoBehaviour
     {
         UICamera.gameObject.SetActive(false);
         ARCamera.gameObject.SetActive(true);
-        //Debug.Log("AR should show");
+        //  Debug.Log("AR should show");
     }
 }
