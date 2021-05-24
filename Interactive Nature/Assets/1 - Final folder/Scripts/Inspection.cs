@@ -19,6 +19,8 @@ public class Inspection : MonoBehaviour
 
     public Quaternion initialRotation;
 
+    public Vector3 zAngle;
+
     public void ChangeObject(GameObject plantToRotate)
     {
         myPlant = plantToRotate;
@@ -53,22 +55,48 @@ public class Inspection : MonoBehaviour
 
     }
 
+    void lerpUI(Transform pointA)
+    {
+        speed = 10 * Time.deltaTime;
+        UIToMove.gameObject.transform.position = Vector3.Lerp(UIToMove.gameObject.transform.position, pointA.position, speed);
+    }
+
     void FixedUpdate()
     {
+        zAngle = new Vector3(0, 0, 1);
+        Transform Button = UIToMove.transform.GetChild(0);
+
         if (!inFocus)
         {
-            speed = 10 * Time.deltaTime;
-            UIToMove.gameObject.transform.position = Vector3.Lerp(pointA.position, pointB.position, speed);
+            if (UIToMove.GetComponent<RectTransform>().position != pointA.position)
+            {
+                lerpUI(pointA);
+            }
+
+            if (Button.rotation != new Quaternion(0, 0, 270, 0))
+            {
+                Button.Rotate(zAngle, 270f);
+            }
         }
-        if (inFocus)
+        else
         {
-            speed = 10 * Time.deltaTime;
-            UIToMove.gameObject.transform.position = Vector3.Lerp(pointB.position, pointA.position, speed);
+            if (UIToMove.GetComponent<RectTransform>().position != pointB.position)
+            {
+                lerpUI(pointB);
+            }
+
+            if (Button.rotation == new Quaternion(0, 0, 90, 0))
+            {
+                Button.Rotate(zAngle, 180f);
+            }
         }
     }
 
     void Update()
     {
+
+        
+
         if (myPlant != null & transform.childCount <= 0)
         {
             Instantiate(myPlant, transform);
@@ -95,14 +123,14 @@ public class Inspection : MonoBehaviour
             {
                 if (transform.GetChild(0).GetComponent<MoveByTouch>() != null)
                 {
-                    Debug.Log("FOCUSED");
+                    //Debug.Log("FOCUSED");
                     swiper.enabled = false;
                     transform.GetChild(0).gameObject.GetComponent<MoveByTouch>().enabled = true;
                 }
             }
             else
             {
-                Debug.Log("NOT FOCUSED");
+                //Debug.Log("NOT FOCUSED");
                 swiper.enabled = true;
                 transform.GetChild(0).gameObject.GetComponent<MoveByTouch>().enabled = false;
             }
@@ -111,7 +139,15 @@ public class Inspection : MonoBehaviour
 
     public void Reset()
     {
-        Debug.Log("reset is pressed");
-        transform.GetChild(0).transform.rotation = initialRotation;
+        
+        if(transform.childCount > 0)
+        {
+            //Debug.Log("reset is pressed");
+            transform.GetChild(0).transform.rotation = initialRotation;
+        }
+        else
+        {
+            //Debug.Log("reset is pressed but there's no children");
+        }
     }
 }

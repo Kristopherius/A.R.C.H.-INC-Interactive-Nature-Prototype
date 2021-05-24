@@ -74,20 +74,20 @@ public class CameraSettings : MonoBehaviour
         {
             if (CameraDevice.Instance.SetFocusMode(CameraDevice.FocusMode.FOCUS_MODE_CONTINUOUSAUTO))
             {
-                Debug.Log("Successfully enabled continuous autofocus.");
+                //Debug.Log("Successfully enabled continuous autofocus.");
                 mAutofocusEnabled = true;
             }
             else
             {
                 // Fallback to normal focus mode
-                Debug.Log("Failed to enable continuous autofocus, switching to normal focus mode");
+                //Debug.Log("Failed to enable continuous autofocus, switching to normal focus mode");
                 mAutofocusEnabled = false;
                 CameraDevice.Instance.SetFocusMode(CameraDevice.FocusMode.FOCUS_MODE_NORMAL);
             }
         }
         else
         {
-            Debug.Log("Disabling continuous autofocus (enabling normal focus mode).");
+            //Debug.Log("Disabling continuous autofocus (enabling normal focus mode).");
             mAutofocusEnabled = false;
             CameraDevice.Instance.SetFocusMode(CameraDevice.FocusMode.FOCUS_MODE_NORMAL);
         }
