@@ -6,10 +6,6 @@ using UnityEngine.EventSystems;
 public class Swiper : MonoBehaviour, IDragHandler, IEndDragHandler
 {
     private Vector3 panelLocation;
-    private Vector3 CollPos;
-
-    private GameObject PlantCollection;
-
     public float percentThreshold = 0.2f;
     public float easing = 0.5f;
     public int totalPages = 3;
@@ -19,7 +15,6 @@ public class Swiper : MonoBehaviour, IDragHandler, IEndDragHandler
     void Start()
     {
         panelLocation = transform.position;
-        //PlantCollection = GameObject.Find("Plant Collection");
     }
     public void OnDrag(PointerEventData data)
     {

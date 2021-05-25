@@ -173,13 +173,13 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.archinc.nectar.PrototypeTwo
+    Android: com.archinc.interactivenature.PrototypeOne
     Lumin: com.PTCInc.VuforiaEngine
     Standalone: com.PTCInc.VuforiaEngine
     iPhone: com.vuforia.engine.VuforiaEngine
   buildNumber:
     iPhone: 0
-  AndroidBundleVersionCode: 985
+  AndroidBundleVersionCode: 986
   AndroidMinSdkVersion: 19
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
@@ -254,11 +254,11 @@ PlayerSettings:
   clonedFromGUID: a8a26b4d131dc41a68909b840a487388
   templatePackageId: 
   templateDefaultScene: 
-  AndroidTargetArchitectures: 1
+  AndroidTargetArchitectures: 3
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
   AndroidKeystoreName: '{inproject}: user.keystore'
-  AndroidKeyaliasName: uploading attempt 4
+  AndroidKeyaliasName: uploading attempt
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
   AndroidIsGame: 1
