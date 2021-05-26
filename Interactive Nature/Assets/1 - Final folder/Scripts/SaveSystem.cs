@@ -7,12 +7,24 @@ public class SaveSystem : MonoBehaviour
 
     public Inspection scanCheck;
 
+    public GameObject plant1;
+    public GameObject plant2;
+    public GameObject plant3;
+    public GameObject plant4;
+    public GameObject plant5;
+    public GameObject plant6;
+    public GameObject plant7;
+    public GameObject plant8;
+
+
     // Start is called before the first frame update
     void Start()
     {
         scanCheck = FindObjectOfType<Inspection>();
-        PlayerPrefs.DeleteAll();
-        PlayerPrefs.SetInt("LastValue", 0);
+
+        PrefReader();
+        //PlayerPrefs.DeleteAll();
+        //PlayerPrefs.SetInt("LastValue", 0);
 
 
     }
@@ -25,6 +37,16 @@ public class SaveSystem : MonoBehaviour
             PlayerPrefSetter(scanCheck.myPlant);
         }
     }
+
+    void PrefReader()
+    {
+        for (int i = 0; i < PlayerPrefs.GetInt("LastValue"); i++)
+        {
+            Debug.Log(i + (PlayerPrefs.GetString(i.ToString())));
+        }
+    }
+
+
 
     void PlayerPrefSetter(GameObject Plant)
     {
