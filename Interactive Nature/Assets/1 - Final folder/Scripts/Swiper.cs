@@ -20,7 +20,6 @@ public class Swiper : MonoBehaviour, IDragHandler, IEndDragHandler
     {
         float differenceX = data.pressPosition.x - data.position.x;
         transform.position = panelLocation - new Vector3(differenceX, 0, 0);
-
     }
     public void OnEndDrag(PointerEventData data)
     {
