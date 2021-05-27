@@ -1,32 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SaveSystem : MonoBehaviour
 {
 
     public Inspection scanCheck;
+    public Swiper swiper;
 
-    public GameObject plant1;
-    public GameObject plant2;
-    public GameObject plant3;
-    public GameObject plant4;
-    public GameObject plant5;
-    public GameObject plant6;
-    public GameObject plant7;
-    public GameObject plant8;
+    private bool collCheckRan = false;
 
 
     // Start is called before the first frame update
     void Start()
     {
         scanCheck = FindObjectOfType<Inspection>();
+        swiper = FindObjectOfType<Swiper>();
 
         PrefReader();
-        //PlayerPrefs.DeleteAll();
-        //PlayerPrefs.SetInt("LastValue", 0);
-
-
+        CollectionCheck();
     }
 
     // Update is called once per frame
@@ -36,14 +29,54 @@ public class SaveSystem : MonoBehaviour
         {
             PlayerPrefSetter(scanCheck.myPlant);
         }
+
+        if(swiper.currentPage == 1 && collCheckRan == false)
+        {
+            collCheckRan = true;
+            CollectionCheck();
+        }
+
+        if(swiper.currentPage != 1)
+        {
+            collCheckRan = false;
+        }
     }
 
     void PrefReader()
     {
         for (int i = 0; i < PlayerPrefs.GetInt("LastValue"); i++)
         {
-            Debug.Log(i + (PlayerPrefs.GetString(i.ToString())));
+            Debug.Log(i + " - " + (PlayerPrefs.GetString(i.ToString())));
         }
+    }
+
+    void CollectionCheck()
+    {
+        foreach(Transform child in transform)
+        {
+            for(int i = 0; i < PlayerPrefs.GetInt("LastValue"); i++)
+            {
+                if (child.name != PlayerPrefs.GetString(i.ToString()))
+                {
+                    //add functionality for the disabled collection object
+                    child.GetComponent<RawImage>().color = Color.black;
+                    child.GetComponentInChildren<Text>().enabled = false;
+                }
+                else
+                {
+                    //add functionality for the enabled collection object
+                    child.GetComponent<RawImage>().color = Color.white;
+                    child.GetComponentInChildren<Text>().enabled = true;
+                    break;
+                }
+            }
+        }        
+    }
+
+    public void DeletePlayerPrefs()
+    {
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.SetInt("LastValue", 0);
     }
 
 
@@ -55,7 +88,7 @@ public class SaveSystem : MonoBehaviour
             PlayerPrefs.SetInt("LastValue", 0);
         }
 
-        for (int i = 0; i < PlayerPrefs.GetInt("LastValue")+1; i++)
+        for (int i = 0; i < PlayerPrefs.GetInt("LastValue") + 1; i++)
         {
             if(PlayerPrefs.GetInt("LastValue") == 0)
             {
