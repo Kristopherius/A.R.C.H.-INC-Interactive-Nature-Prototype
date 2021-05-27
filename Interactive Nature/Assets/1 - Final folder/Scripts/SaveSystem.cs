@@ -77,6 +77,7 @@ public class SaveSystem : MonoBehaviour
     {
         PlayerPrefs.DeleteAll();
         PlayerPrefs.SetInt("LastValue", 0);
+        CollectionCheck();
     }
 
 
