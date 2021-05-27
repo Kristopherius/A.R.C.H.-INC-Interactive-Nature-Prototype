@@ -19,7 +19,7 @@ public class Inspection : MonoBehaviour
 
     public Quaternion initialRotation;
 
-    public Vector3 zAngle;
+    public Vector3 buttonScale;
 
     public void ChangeObject(GameObject plantToRotate)
     {
@@ -63,7 +63,7 @@ public class Inspection : MonoBehaviour
 
     void FixedUpdate()
     {
-        zAngle = new Vector3(0, 0, 1);
+        buttonScale = new Vector3(1, 1, 1);
         Transform Button = UIToMove.transform.GetChild(0);
 
         if (!inFocus)
@@ -73,10 +73,7 @@ public class Inspection : MonoBehaviour
                 lerpUI(pointA);
             }
 
-            if (Button.rotation != new Quaternion(0, 0, 270, 0))
-            {
-                Button.Rotate(zAngle, 270f);
-            }
+            Button.localScale = buttonScale;
         }
         else
         {
@@ -85,10 +82,7 @@ public class Inspection : MonoBehaviour
                 lerpUI(pointB);
             }
 
-            if (Button.rotation == new Quaternion(0, 0, 90, 0))
-            {
-                Button.Rotate(zAngle, 180f);
-            }
+            Button.localScale = -buttonScale;
         }
     }
 
@@ -123,14 +117,12 @@ public class Inspection : MonoBehaviour
             {
                 if (transform.GetChild(0).GetComponent<MoveByTouch>() != null)
                 {
-                    //Debug.Log("FOCUSED");
                     swiper.enabled = false;
                     transform.GetChild(0).gameObject.GetComponent<MoveByTouch>().enabled = true;
                 }
             }
             else
             {
-                //Debug.Log("NOT FOCUSED");
                 swiper.enabled = true;
                 transform.GetChild(0).gameObject.GetComponent<MoveByTouch>().enabled = false;
             }
@@ -142,12 +134,11 @@ public class Inspection : MonoBehaviour
         
         if(transform.childCount > 0)
         {
-            //Debug.Log("reset is pressed");
             transform.GetChild(0).transform.rotation = initialRotation;
         }
         else
         {
-            //Debug.Log("reset is pressed but there's no children");
+            Debug.Log("reset is pressed but there's no children");
         }
     }
 }
