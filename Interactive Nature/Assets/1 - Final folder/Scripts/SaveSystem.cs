@@ -18,7 +18,7 @@ public class SaveSystem : MonoBehaviour
         scanCheck = FindObjectOfType<Inspection>();
         swiper = FindObjectOfType<Swiper>();
 
-        PrefReader();
+        //PrefReader();
         CollectionCheck();
     }
 
@@ -50,7 +50,7 @@ public class SaveSystem : MonoBehaviour
         }
     }
 
-    void CollectionCheck()
+    public void CollectionCheck()
     {
         foreach(Transform child in transform)
         {

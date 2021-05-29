@@ -5,6 +5,7 @@ public class CameraChange : MonoBehaviour
     public Camera ARCamera;
     public Camera UICamera;
     public Swiper swiper;
+    public GameObject directional;
 
     // Call this function to disable AR camera,
     // and enable UI camera.
@@ -15,10 +16,12 @@ public class CameraChange : MonoBehaviour
         if (swiper.currentPage != 2)
         {
             ShowUIView();
+            directional.SetActive(true);
         }
         else
         {
             ShowARView();
+            directional.SetActive(false);
         }
     }
     public void ShowUIView()
