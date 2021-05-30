@@ -89,8 +89,6 @@ public class Inspection : MonoBehaviour
     void Update()
     {
 
-        
-
         if (myPlant != null & transform.childCount <= 0)
         {
             Instantiate(myPlant, transform);

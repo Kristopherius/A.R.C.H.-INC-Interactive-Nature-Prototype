@@ -8,8 +8,8 @@ public class CameraSize : MonoBehaviour
     RectTransform rectT;
     void Start()
     {
-        Debug.Log("Camera Testing - Screen Width " + Screen.width);
-        Debug.Log("Camera Testing - Screen Height " + Screen.height);
+        //Debug.Log("Camera Testing - Screen Width " + Screen.width);
+        //Debug.Log("Camera Testing - Screen Height " + Screen.height);
         rectT = transform.GetComponent<RectTransform>();
     }
 
