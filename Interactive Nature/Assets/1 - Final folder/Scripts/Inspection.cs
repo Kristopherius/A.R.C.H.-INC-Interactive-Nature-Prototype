@@ -2,25 +2,36 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Inspection : MonoBehaviour
 {
-
+    [Header("Plant Inspection")]
     public GameObject myPlant;
     public Swiper swiper;
 
-    public Transform pointA, pointB;
+    [Header("UI Properties")]
+    public Transform pointA;
+    public Transform pointB;
     public GameObject UIToMove;
-    float speed = 1f;
-
-    private float scale = 5f;
-
     public bool inFocus;
+    public Vector3 buttonScale;
+    public Color colorGreen;
+    public Color colorBrown;
+    float speed = 1f;
+    public Text plantName;
 
+    [Header("Reset Function")]
+    private float scale = 5f;
     public Quaternion initialRotation;
 
-    public Vector3 buttonScale;
 
+
+    private void Start()
+    {
+        colorGreen = new Color32(173, 193, 120, 255);
+        colorBrown = new Color32(108, 88, 76, 255);
+}
     public void ChangeObject(GameObject plantToRotate)
     {
         myPlant = plantToRotate;
@@ -74,6 +85,7 @@ public class Inspection : MonoBehaviour
             }
 
             Button.localScale = buttonScale;
+            UIToMove.GetComponentInChildren<Image>().color = colorBrown;
         }
         else
         {
@@ -83,6 +95,7 @@ public class Inspection : MonoBehaviour
             }
 
             Button.localScale = -buttonScale;
+            UIToMove.GetComponentInChildren<Image>().color = colorGreen;
         }
     }
 
@@ -92,6 +105,7 @@ public class Inspection : MonoBehaviour
         if (myPlant != null & transform.childCount <= 0)
         {
             Instantiate(myPlant, transform);
+            plantName.text = myPlant.name;
             if (transform.childCount > 0)
             {
                 foreach (Transform child in transform)

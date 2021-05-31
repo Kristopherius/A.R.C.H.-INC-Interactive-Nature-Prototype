@@ -59,8 +59,8 @@ public class SaveSystem : MonoBehaviour
                 if (child.name != PlayerPrefs.GetString(i.ToString()))
                 {
                     //add functionality for the disabled collection object
-                    child.GetComponent<RawImage>().color = Color.black;
                     child.GetComponentInChildren<Text>().enabled = false;
+                    child.GetComponent<RawImage>().color = Color.black*0.39f;
                 }
                 else
                 {
