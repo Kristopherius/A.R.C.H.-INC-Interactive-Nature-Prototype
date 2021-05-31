@@ -6,8 +6,10 @@ public class MoveByTouch : MonoBehaviour
 {
 
     private float rotationRate = 0.1f;
-    public float zoomMin = 1;
-    public float zoomMax = 14;
+
+    public float zoomMin = 0.2f;
+    public float zoomMax = 2.5f;
+
     public GameObject cam;
 
     private void Start()
@@ -30,8 +32,7 @@ public class MoveByTouch : MonoBehaviour
 
             float difference = currMagnitude - prevMagnitude;
 
-            Debug.Log("Zoom size" + difference);
-
+            //Debug.Log("Zoom size" + difference);
 
             zoom(difference * 0.01f);
         }
