@@ -13,7 +13,6 @@ public class InfoText : MonoBehaviour
     public Swiper swiper;
     string readFromFilePath;
     List<string> fileLines;
-    int counter = 0;
 
 
     public void updateValues()
@@ -32,8 +31,8 @@ public class InfoText : MonoBehaviour
             {
                 return;
             }
-            string[] x = line.Split('_');
-            transform.GetChild(counter).GetChild(0).GetComponent<Text>().text = x[1];
+            
+            transform.GetChild(counter).GetChild(0).GetComponent<Text>().text = line;
             counter++;
         }
     }
