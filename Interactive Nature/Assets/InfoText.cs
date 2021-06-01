@@ -27,7 +27,9 @@ public class InfoText : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        readFromFilePath = Application.streamingAssetsPath + "/NectAR/" + "PlantInfo" + ".txt";
+        Debug.Log(inspection.myPlant.name + " it is now showing this debug");
+        
+        readFromFilePath = Application.streamingAssetsPath + "/NectAR/" + inspection.myPlant.name + ".txt";
 
         fileLines = File.ReadAllLines(readFromFilePath).ToList();
 
@@ -40,7 +42,7 @@ public class InfoText : MonoBehaviour
         int counter = 0;
         foreach (string line in fileLines)
         {
-            if (inspection.myPlant != null && line.Contains(inspection.myPlant.tag))
+            if (inspection.myPlant != null /*&& line.Contains(inspection.myPlant.tag)*/)
             {
                 if (line.Contains("end"))
                 {
@@ -66,5 +68,7 @@ public class InfoText : MonoBehaviour
     {
         updateValues();
         Debug.Log("Counter " + counter);
+
+        Debug.Log(inspection.myPlant.name + " it is now showing this debug");
     }
 }
