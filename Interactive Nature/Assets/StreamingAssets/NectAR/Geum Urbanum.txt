@@ -1,1 +1,10 @@
-W_Geum Urbanum
+Geum Urbanum
+Geum
+Rosaceae
+Plantae
+Europe, Middle-East
+0,30-0,60
+Always there
+Anti fever, against digestive complaints.
+X
+end

@@ -1,1 +1,10 @@
-W_Silene Vulgaris
+Silene Vulgaris
+Silene
+Caryophyllaceae
+Plantae
+Europe
+0,30-0,60
+Always there
+Healing herb
+X
+end
