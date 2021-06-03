@@ -20,6 +20,7 @@ public class SaveSystem : MonoBehaviour
 
         //PrefReader();
         CollectionCheck();
+        DeletePlayerPrefs();
     }
 
     // Update is called once per frame

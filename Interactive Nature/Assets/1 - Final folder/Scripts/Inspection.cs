@@ -106,6 +106,7 @@ public class Inspection : MonoBehaviour
         {
             Instantiate(myPlant, transform);
             plantName.text = myPlant.name;
+
             if (transform.childCount > 0)
             {
                 foreach (Transform child in transform)
