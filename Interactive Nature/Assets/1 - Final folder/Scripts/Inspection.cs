@@ -25,6 +25,9 @@ public class Inspection : MonoBehaviour
     private float scale = 5f;
     public Quaternion initialRotation;
 
+    [Header("Seasonal Rotation")]
+    public int counter = 0;
+
 
 
     private void Start()
@@ -37,6 +40,39 @@ public class Inspection : MonoBehaviour
         myPlant = plantToRotate;
         initialRotation = myPlant.transform.rotation;
         DeleteChild();
+        if(myPlant != null)
+        {
+            for(int i = 0; i< myPlant.GetComponentsInChildren<MeshRenderer>().Length; i++)
+            {
+                myPlant.GetComponentsInChildren<MeshRenderer>()[i].enabled = true;
+            }
+        }
+    }
+
+    public void rotateSeasonsV1()
+    {
+        if (myPlant != null)
+        {
+            Debug.Log(myPlant.transform.GetChild(counter));
+            myPlant.transform.GetChild(counter).gameObject.SetActive(true);
+            foreach(Transform child in myPlant.transform)
+            {
+                if(child != myPlant.transform.GetChild(counter))
+                {
+                    child.gameObject.SetActive(false);
+                }
+            }
+            counter++;
+            if (counter >= myPlant.transform.childCount)
+            {
+                counter = 0;
+            }
+        }
+    }
+
+    public void rotateSeasonsV2(string seasonName)
+    {
+
     }
 
     public void Focused()
