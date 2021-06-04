@@ -51,20 +51,25 @@ public class Inspection : MonoBehaviour
 
     public void rotateSeasonsV1()
     {
-        if (myPlant != null)
+        if (transform.GetChild(0) != null)
         {
-            Debug.Log(myPlant.transform.GetChild(counter).name);
-            myPlant.transform.GetChild(counter).gameObject.SetActive(true);
-            foreach(Transform child in myPlant.transform)
+            GameObject go = transform.GetChild(0).gameObject;
+            Debug.Log(go.transform.GetChild(counter).name);
+            go.transform.GetChild(counter).gameObject.SetActive(true);
+            foreach(Transform child in go.transform)
             {
+                for (int i = 0; i < go.GetComponentsInChildren<MeshRenderer>().Length; i++)
+                {
+                    go.GetComponentsInChildren<MeshRenderer>()[i].enabled = true;
+                }
                 Debug.Log(myPlant.name + " " + child.name);
-                if(child != myPlant.transform.GetChild(counter))
+                if(child != go.transform.GetChild(counter))
                 {
                     child.gameObject.SetActive(false);
                 }
             }
             counter++;
-            if (counter >= myPlant.transform.childCount)
+            if (counter >= go.transform.childCount)
             {
                 counter = 0;
             }
