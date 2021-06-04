@@ -53,11 +53,11 @@ public class Inspection : MonoBehaviour
     {
         if (myPlant != null)
         {
-            Debug.Log(myPlant.transform.GetChild(counter));
+            Debug.Log(myPlant.transform.GetChild(counter).name);
             myPlant.transform.GetChild(counter).gameObject.SetActive(true);
             foreach(Transform child in myPlant.transform)
             {
-                Debug.Log(myPlant + " " + child);
+                Debug.Log(myPlant.name + " " + child.name);
                 if(child != myPlant.transform.GetChild(counter))
                 {
                     child.gameObject.SetActive(false);
