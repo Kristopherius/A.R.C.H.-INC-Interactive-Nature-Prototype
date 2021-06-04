@@ -2471,7 +2471,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: FamilyVal
+  m_Text: Choose
 --- !u!222 &106141883
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4484,7 +4484,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Medical Applications
+  m_Text: The collection
 --- !u!222 &219493791
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6010,7 +6010,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: KingdomVal
+  m_Text: A plant
 --- !u!222 &353420695
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14280,7 +14280,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Seasonal Cycle
+  m_Text: Or
 --- !u!222 &922259677
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15962,7 +15962,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: GenusVal
+  m_Text: Or
 --- !u!222 &1028337669
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23800,7 +23800,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Origin Country
+  m_Text: From
 --- !u!222 &1525649632
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -25104,7 +25104,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Mythology
+  m_Text: To view their info
 --- !u!222 &1612779813
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -26587,7 +26587,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: NameVal
+  m_Text: Scan
 --- !u!222 &1690602448
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -27936,7 +27936,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: AVG. Height
+  m_Text: A sticker
 --- !u!222 &1809584173
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -54,15 +54,14 @@ public class Inspection : MonoBehaviour
         if (transform.GetChild(0) != null)
         {
             GameObject go = transform.GetChild(0).gameObject;
-            Debug.Log(go.transform.GetChild(counter).name);
             go.transform.GetChild(counter).gameObject.SetActive(true);
+
             foreach(Transform child in go.transform)
             {
                 for (int i = 0; i < go.GetComponentsInChildren<MeshRenderer>().Length; i++)
                 {
                     go.GetComponentsInChildren<MeshRenderer>()[i].enabled = true;
                 }
-                Debug.Log(myPlant.name + " " + child.name);
                 if(child != go.transform.GetChild(counter))
                 {
                     child.gameObject.SetActive(false);
