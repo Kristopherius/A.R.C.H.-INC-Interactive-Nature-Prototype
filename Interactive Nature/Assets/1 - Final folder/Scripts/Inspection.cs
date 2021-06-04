@@ -25,6 +25,9 @@ public class Inspection : MonoBehaviour
     private float scale = 5f;
     public Quaternion initialRotation;
 
+    [Header("Seasonal Rotation")]
+    public int counter = 0;
+
 
 
     private void Start()
@@ -37,6 +40,44 @@ public class Inspection : MonoBehaviour
         myPlant = plantToRotate;
         initialRotation = myPlant.transform.rotation;
         DeleteChild();
+        if(myPlant != null)
+        {
+            for(int i = 0; i< myPlant.GetComponentsInChildren<MeshRenderer>().Length; i++)
+            {
+                myPlant.GetComponentsInChildren<MeshRenderer>()[i].enabled = true;
+            }
+        }
+    }
+
+    public void rotateSeasonsV1()
+    {
+        if (transform.GetChild(0) != null)
+        {
+            GameObject go = transform.GetChild(0).gameObject;
+            go.transform.GetChild(counter).gameObject.SetActive(true);
+
+            foreach(Transform child in go.transform)
+            {
+                for (int i = 0; i < go.GetComponentsInChildren<MeshRenderer>().Length; i++)
+                {
+                    go.GetComponentsInChildren<MeshRenderer>()[i].enabled = true;
+                }
+                if(child != go.transform.GetChild(counter))
+                {
+                    child.gameObject.SetActive(false);
+                }
+            }
+            counter++;
+            if (counter >= go.transform.childCount)
+            {
+                counter = 0;
+            }
+        }
+    }
+
+    public void rotateSeasonsV2(string seasonName)
+    {
+
     }
 
     public void Focused()
@@ -106,6 +147,7 @@ public class Inspection : MonoBehaviour
         {
             Instantiate(myPlant, transform);
             plantName.text = myPlant.name;
+
             if (transform.childCount > 0)
             {
                 foreach (Transform child in transform)

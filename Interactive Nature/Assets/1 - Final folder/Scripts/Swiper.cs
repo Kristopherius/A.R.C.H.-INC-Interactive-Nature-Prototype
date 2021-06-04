@@ -10,12 +10,22 @@ public class Swiper : MonoBehaviour, IDragHandler, IEndDragHandler
     public float easing = 0.5f;
     public int totalPages = 3;
     public int currentPage = 2;
+    public Vector3 inspectionPanel;
 
     // Start is called before the first frame update
     void Start()
     {
         panelLocation = transform.position;
+        inspectionPanel = new Vector3(-540f, 960f, 0f);
     }
+
+    public void moveToInspect()
+    {
+        StartCoroutine(SmoothMove(transform.position, inspectionPanel, easing));
+        panelLocation = inspectionPanel;
+        currentPage = 3;
+    }
+
     public void OnDrag(PointerEventData data)
     {
         float differenceX = data.pressPosition.x - data.position.x;

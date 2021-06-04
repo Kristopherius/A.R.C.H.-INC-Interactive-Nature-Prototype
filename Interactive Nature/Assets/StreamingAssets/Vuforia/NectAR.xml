@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="Verbena_Officinalis" size="1600.000000 1200.000000" />
+    <ImageTarget name="Silene_Vulgaris" size="1600.000000 1200.000000" />
+    <ImageTarget name="Prunella_Vulgaris" size="1600.000000 1200.000000" />
+    <ImageTarget name="Leucanthemum_Vulgare" size="1600.000000 1200.000000" />
+    <ImageTarget name="Isatis_Tinktoria" size="1600.000000 1200.000000" />
+    <ImageTarget name="Geum_Urbanum" size="1600.000000 1200.000000" />
+    <ImageTarget name="Campanula_Trachelium" size="1600.000000 1200.000000" />
+    <ImageTarget name="Campancula_Rapunculus" size="1600.000000 1200.000000" />
+  </Tracking>
+</QCARConfig>

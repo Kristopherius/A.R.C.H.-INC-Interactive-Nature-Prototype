@@ -27,7 +27,7 @@ public class InfoText : MonoBehaviour
         int counter = 0;
         foreach (string line in fileLines)
         {
-            if (line.Contains("end"))
+            if (line.Contains("@?!@"))
             {
                 return;
             }

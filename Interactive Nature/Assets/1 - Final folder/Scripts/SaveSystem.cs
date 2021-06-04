@@ -20,6 +20,7 @@ public class SaveSystem : MonoBehaviour
 
         //PrefReader();
         CollectionCheck();
+        //DeletePlayerPrefs();
     }
 
     // Update is called once per frame
@@ -54,22 +55,36 @@ public class SaveSystem : MonoBehaviour
     {
         foreach(Transform child in transform)
         {
-            for(int i = 0; i < PlayerPrefs.GetInt("LastValue"); i++)
+            if (PlayerPrefs.GetInt("LastValue") > 0)
             {
-                if (child.name != PlayerPrefs.GetString(i.ToString()))
+                for (int i = 0; i < PlayerPrefs.GetInt("LastValue"); i++)
                 {
-                    //add functionality for the disabled collection object
-                    child.GetComponentInChildren<Text>().enabled = false;
-                    child.GetComponent<RawImage>().color = Color.black*0.39f;
-                }
-                else
-                {
-                    //add functionality for the enabled collection object
-                    child.GetComponent<RawImage>().color = Color.white;
-                    child.GetComponentInChildren<Text>().enabled = true;
-                    break;
+                    if (child.name != PlayerPrefs.GetString(i.ToString()))
+                    {
+                        //add functionality for the disabled collection object
+                        child.GetComponentInChildren<Text>().enabled = false;
+                        child.GetComponent<Button>().enabled = false;
+                        child.GetComponent<RawImage>().color = Color.black * 0.39f;
+                    }
+                    else
+                    {
+                        //add functionality for the enabled collection object
+                        child.GetComponent<RawImage>().color = Color.white;
+                        child.GetComponent<Button>().enabled = true;
+                        child.GetComponentInChildren<Text>().enabled = true;
+                        break;
+                    }
                 }
             }
+            else
+            {
+                for (int i = 0; i < transform.childCount; i++)
+                {
+                    child.GetComponentInChildren<Text>().enabled = false;
+                    child.GetComponent<Button>().enabled = false;
+                    child.GetComponent<RawImage>().color = Color.black * 0.39f;
+                }
+            }            
         }        
     }
 
@@ -80,8 +95,10 @@ public class SaveSystem : MonoBehaviour
         CollectionCheck();
     }
 
-
-
+    public void hintDisabled()
+    {
+        PlayerPrefs.SetInt("Hint",1);
+    }
     void PlayerPrefSetter(GameObject Plant)
     {
         if (!PlayerPrefs.HasKey("LastValue"))
