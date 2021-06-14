@@ -22,14 +22,6 @@ public class InfoText : MonoBehaviour
             readFromFilePath = Application.streamingAssetsPath + "/NectAR/" + inspection.myPlant.name + ".txt";
 
             fileLines = File.ReadAllLines(readFromFilePath).ToList();
-
-            foreach (Transform child in transform) 
-            {
-                if (child.GetComponent<LineContainer>() != null)
-                {
-                    child.GetComponent<LineContainer>().ChangeSpacing();
-                }
-            }
         }
         
         int counter = 0;
