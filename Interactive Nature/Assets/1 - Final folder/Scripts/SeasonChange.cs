@@ -11,6 +11,7 @@ public class SeasonChange : MonoBehaviour
     {
         swiper = FindObjectOfType<Swiper>();
         inspection = FindObjectOfType<Inspection>();
+
         if(myPlant == null)
         {
             foreach(Transform child in transform)
@@ -22,15 +23,23 @@ public class SeasonChange : MonoBehaviour
 
     private void Update()
     {
-        if (swiper.currentPage == 3 && inspection.transform.GetChild(0) != null)
+        if (swiper.currentPage == 3 && inspection.transform.childCount > 0)
         {
-            changePlant(inspection.transform.GetChild(0).gameObject);
+            if (transform.name.Contains("Inspect"))
+            {
+                myPlant = inspection.transform.GetChild(0).gameObject;
+                enableButtons();
+            }
         }
     }
     public void changePlant(GameObject plant)
     {
         myPlant = plant;
+        enableButtons();
+    }
 
+    public void enableButtons()
+    {
         foreach (Transform child in transform)
         {
             child.gameObject.SetActive(true);
