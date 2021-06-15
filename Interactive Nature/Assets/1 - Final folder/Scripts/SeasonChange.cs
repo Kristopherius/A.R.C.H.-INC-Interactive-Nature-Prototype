@@ -5,8 +5,12 @@ using UnityEngine;
 public class SeasonChange : MonoBehaviour
 {
     GameObject myPlant;
+    public Swiper swiper;
+    public Inspection inspection;
     private void Start()
     {
+        swiper = FindObjectOfType<Swiper>();
+        inspection = FindObjectOfType<Inspection>();
         if(myPlant == null)
         {
             foreach(Transform child in transform)
@@ -18,17 +22,27 @@ public class SeasonChange : MonoBehaviour
 
     private void Update()
     {
-        if (myPlant != null)
+        if (swiper.currentPage == 3 && inspection.transform.childCount > 0)
         {
-            foreach (Transform child in transform)
-            {
-                child.gameObject.SetActive(true);
-            }
+            myPlant = inspection.transform.GetChild(0).gameObject;
         }
     }
     public void changePlant(GameObject plant)
     {
         myPlant = plant;
+
+        foreach (Transform child in transform)
+        {
+            child.gameObject.SetActive(true);
+        }
+    }
+
+    public void disableButtons()
+    {
+        foreach (Transform child in transform)
+        {
+            child.gameObject.SetActive(false);
+        }
     }
 
     public void seasonChange(string season)

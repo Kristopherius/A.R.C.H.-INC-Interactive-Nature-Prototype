@@ -60,37 +60,6 @@ public class Inspection : MonoBehaviour
         }
     }
 
-    public void rotateSeasonsV1()
-    {
-        if (transform.GetChild(0) != null)
-        {
-            GameObject go = transform.GetChild(0).gameObject;
-            go.transform.GetChild(counter).gameObject.SetActive(true);
-
-            foreach(Transform child in go.transform)
-            {
-                for (int i = 0; i < go.GetComponentsInChildren<MeshRenderer>().Length; i++)
-                {
-                    go.GetComponentsInChildren<MeshRenderer>()[i].enabled = true;
-                }
-                if(child != go.transform.GetChild(counter))
-                {
-                    child.gameObject.SetActive(false);
-                }
-            }
-            counter++;
-            if (counter >= go.transform.childCount)
-            {
-                counter = 0;
-            }
-        }
-    }
-
-    public void rotateSeasonsV2(string seasonName)
-    {
-
-    }
-
     public void Focused()
     {
         if (inFocus == true)
