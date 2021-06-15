@@ -9,7 +9,7 @@
 [LOG] DownMix::init                            : done.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0000022611CA7288 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0000023B3BEEA268 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -20,92 +20,9 @@
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] SoundI::release                          : ARCH - Background layer (00000225CCA62E78)
-[LOG] SoundI::release                          :     ARCH - Background layer (00000226A5A1FDF8)
-[LOG] SoundI::release                          :     ARCH - Background layer (00000225B6234B58)
-[LOG] SystemI::createSound                     : filename = C:/Users/krist/Documents/FMOD Studio/NectAR/Build\Desktop/MUSIC.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000225B6234D08 : node = 000002260BD5A410
-[LOG] SystemI::createSound                     : add node to async list : head = 0000022611D85528.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000225B6234D08
-[LOG] SystemI::createSoundInternal             :     Create name='C:/Users/krist/Documents/FMOD Studio/NectAR/Build\Desktop/MUSIC.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3623904
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15456
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002260BD5A520
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='ARCH - Background layer', format=5, channels=2, frequency=48000, lengthbytes=378208, lengthpcm=2076421, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.948761.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000225B6234D08
-[LOG] SoundI::release                          : ARCH - Background layer (00000225B6234D08)
-[LOG] SoundI::release                          :     ARCH - Background layer (00000225D0018778)
-[LOG] SoundI::release                          :     ARCH - Background layer (00000226B23357E8)
-[LOG] SystemI::createSound                     : filename = C:/Users/krist/Documents/FMOD Studio/NectAR/Build\Desktop/MUSIC.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 0000022717A123A8 : node = 00000225FD518130
-[LOG] SystemI::createSound                     : add node to async list : head = 0000022611D85528.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000022717A123A8
-[LOG] SystemI::createSoundInternal             :     Create name='C:/Users/krist/Documents/FMOD Studio/NectAR/Build\Desktop/MUSIC.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3623904
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15456
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000225FD518240
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='ARCH - Background layer', format=5, channels=2, frequency=48000, lengthbytes=378208, lengthpcm=2076421, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.948761.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000022717A123A8
-[LOG] SoundI::release                          : ARCH - Background layer (0000022717A123A8)
-[LOG] SoundI::release                          :     ARCH - Background layer (00000226A5A1FDF8)
-[LOG] SoundI::release                          :     ARCH - Background layer (00000225B6234B58)
-[LOG] SystemI::createSound                     : filename = C:/Users/krist/Documents/FMOD Studio/NectAR/Build\Desktop/MUSIC.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000226B5C95638 : node = 00000226F4713BE0
-[LOG] SystemI::createSound                     : add node to async list : head = 0000022611D85528.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000226B5C95638
-[LOG] SystemI::createSoundInternal             :     Create name='C:/Users/krist/Documents/FMOD Studio/NectAR/Build\Desktop/MUSIC.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3623904
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15456
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000226F4713CF0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='ARCH - Background layer', format=5, channels=2, frequency=48000, lengthbytes=378208, lengthpcm=2076421, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.948761.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000226B5C95638
-[LOG] SoundI::release                          : ARCH - Background layer (00000226B5C95638)
-[LOG] SoundI::release                          :     ARCH - Background layer (00000225D00185D8)
-[LOG] SoundI::release                          :     ARCH - Background layer (00000226B23357E8)
-[LOG] SystemI::createSound                     : filename = C:/Users/krist/Documents/FMOD Studio/NectAR/Build\Desktop/MUSIC.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000225CCA61378 : node = 00000225FD0FAC00
-[LOG] SystemI::createSound                     : add node to async list : head = 0000022611D85528.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000225CCA61378
-[LOG] SystemI::createSoundInternal             :     Create name='C:/Users/krist/Documents/FMOD Studio/NectAR/Build\Desktop/MUSIC.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3623904
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15456
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000225FD0FAD10
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='ARCH - Background layer', format=5, channels=2, frequency=48000, lengthbytes=378208, lengthpcm=2076421, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.948761.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000225CCA61378
-[LOG] SoundI::release                          : ARCH - Background layer (00000225CCA61378)
-[LOG] SoundI::release                          :     ARCH - Background layer (00000226A5A1FDF8)
-[LOG] SoundI::release                          :     ARCH - Background layer (00000225B6234B58)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] ProfileClient::markForDead               : Closing client connection
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] FMOD_OS_Net_Read                         : Interrupted.[LOG] ProfileClient::recvThreadLoopFunction    : Socket disconnected
-[LOG] Thread::callback                         : FMOD profiler thread (send) finished.
-[LOG] Thread::callback                         : FMOD profiler thread (recv) finished.
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
 [LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
