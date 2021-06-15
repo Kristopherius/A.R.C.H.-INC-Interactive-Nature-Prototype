@@ -22,9 +22,9 @@ public class SeasonChange : MonoBehaviour
 
     private void Update()
     {
-        if (swiper.currentPage == 3 && inspection.transform.childCount > 0)
+        if (swiper.currentPage == 3 && inspection.transform.GetChild(0) != null)
         {
-            myPlant = inspection.transform.GetChild(0).gameObject;
+            changePlant(inspection.transform.GetChild(0).gameObject);
         }
     }
     public void changePlant(GameObject plant)
