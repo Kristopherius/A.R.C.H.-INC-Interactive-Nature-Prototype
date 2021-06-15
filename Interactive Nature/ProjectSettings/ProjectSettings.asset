@@ -129,7 +129,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 0.4
+  bundleVersion: 0.5
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -179,7 +179,7 @@ PlayerSettings:
     iPhone: com.vuforia.engine.VuforiaEngine
   buildNumber:
     iPhone: 0
-  AndroidBundleVersionCode: 988
+  AndroidBundleVersionCode: 990
   AndroidMinSdkVersion: 19
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1

@@ -16,7 +16,7 @@ public class Swiper : MonoBehaviour, IDragHandler, IEndDragHandler
     void Start()
     {
         panelLocation = transform.position;
-        inspectionPanel = new Vector3(-540f, 960f, 0f);
+        inspectionPanel = new Vector3(-540f, Screen.height/2f, 0f);
     }
 
     public void moveToInspect()
