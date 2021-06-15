@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8631705274872397826
+--- !u!114 &-6633166254281705007
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,18 +9,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/NectAR Audio
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/MUSIC.bank
   m_EditorClassIdentifier: 
-  Name: NectAR Audio
-  Min: 0
-  Max: 8
-  Default: 0
-  ID:
-    data1: 4022383153
-    data2: 3200922875
-  Exists: 0
---- !u!114 &-8288360512347233195
+  Path: C:/Users/krist/Documents/FMOD Studio/NectAR/Build/Desktop/MUSIC.bank
+  Name: MUSIC
+  StudioPath: bank:/MUSIC
+  lastModified: 637593810200739674
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 3640384
+  Exists: 1
+--- !u!114 &-6275467739884206605
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -30,7 +31,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Try1/NectAR Audio
+  m_Name: parameter:/Music/NectAR Audio
   m_EditorClassIdentifier: 
   Name: NectAR Audio
   Min: 0
@@ -39,8 +40,28 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
+  Exists: 0
+--- !u!114 &-5041962041992451523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/Parameter 1
+  m_EditorClassIdentifier: 
+  Name: Parameter 1
+  Min: 0
+  Max: 9
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
   Exists: 1
---- !u!114 &-7200145637562896006
+--- !u!114 &-4223039722647926456
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -55,102 +76,13 @@ MonoBehaviour:
   Path: C:/Users/krist/Documents/FMOD Studio/NectAR/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637593791729340183
+  lastModified: 637593831015510572
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 886
+    Value: 930
   Exists: 1
---- !u!114 &-6738068244596057489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Base
-  m_EditorClassIdentifier: 
-  Path: event:/Base
-  guid: 867bf128a6707b46939cee0ce9ba1767
-  Banks:
-  - {fileID: -3907542697784656039}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 38450
---- !u!114 &-3907542697784656039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/MUSIC.bank
-  m_EditorClassIdentifier: 
-  Path: C:/Users/krist/Documents/FMOD Studio/NectAR/Build/Desktop/MUSIC.bank
-  Name: MUSIC
-  StudioPath: bank:/MUSIC
-  lastModified: 637593777503519746
-  LoadResult: 0
-  FileSizes:
-  - Name: 
-    Value: 3640320
-  Exists: 1
---- !u!114 &-3896370967041780017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/NectAR/Music
-  m_EditorClassIdentifier: 
-  Path: event:/NectAR/Music
-  guid: c8c3d3155064ac478066f0f63541feb2
-  Banks:
-  - {fileID: 3727891380601582600}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 6749553286553729151}
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 523258
---- !u!114 &-3028745876782178238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: C:/Users/krist/Documents/FMOD Studio/NectAR/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 637593791729320190
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 1164
-  Exists: 1
---- !u!114 &-2472542904312692770
+--- !u!114 &-2724873964703331443
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,7 +92,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Try1/NectAR Audio
+  m_Name: parameter:/Music/NectAR Audio
   m_EditorClassIdentifier: 
   Name: NectAR Audio
   Min: 0
@@ -169,8 +101,8 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
---- !u!114 &-1850262039073745689
+  Exists: 0
+--- !u!114 &-2293805589202926189
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -180,21 +112,42 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Try1
+  m_Name: event:/Attempt 421
   m_EditorClassIdentifier: 
-  Path: event:/Try1
-  guid: c8c3d3155064ac478066f0f63541feb2
-  Banks:
-  - {fileID: -3907542697784656039}
+  Path: event:/Attempt 421
+  guid: d1b8be6131653247bc65c5ff9bba27aa
+  Banks: []
   IsStream: 1
   Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: -2472542904312692770}
+  IsOneShot: 1
+  Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 523258
---- !u!114 &-1414490269412987852
+  Length: 43258
+--- !u!114 &-1590908217857806766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NectAR/Music2
+  m_EditorClassIdentifier: 
+  Path: event:/NectAR/Music2
+  guid: 6f539bd9d6acb746860b8aea1f0845e0
+  Banks:
+  - {fileID: 292597931567906117}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-1323785888154334399
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -204,17 +157,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Try1/NectAR Audio
+  m_Name: parameter:/Music/NectAR Audio
   m_EditorClassIdentifier: 
   Name: NectAR Audio
   Min: 0
   Max: 8
   Default: 0
   ID:
-    data1: 4022383153
-    data2: 3200922875
+    data1: 0
+    data2: 0
   Exists: 0
---- !u!114 &-1013590981026692261
+--- !u!114 &-728239705859305256
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -223,17 +176,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/Parameter 1
   m_EditorClassIdentifier: 
-  Path: C:/Users/krist/Documents/FMOD Studio/NectAR/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 637593777503030029
-  LoadResult: 0
-  FileSizes:
-  - Name: 
-    Value: 1164
+  Name: Parameter 1
+  Min: 0
+  Max: 9
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &-410175861725776307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/NectAR Audio
+  m_EditorClassIdentifier: 
+  Name: NectAR Audio
+  Min: 0
+  Max: 8
+  Default: 0
+  ID:
+    data1: 4022383153
+    data2: 3200922875
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -248,19 +220,41 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -7200145637562896006}
-  - {fileID: -3028745876782178238}
-  - {fileID: 3727891380601582600}
+  - {fileID: -4223039722647926456}
+  - {fileID: 292597931567906117}
+  - {fileID: 4565699939379455642}
   EditorEvents:
-  - {fileID: -3896370967041780017}
+  - {fileID: 7985412850813417206}
+  - {fileID: -1590908217857806766}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -3028745876782178238}
+  - {fileID: 292597931567906117}
   StringsBanks:
-  - {fileID: -7200145637562896006}
-  stringsBankWriteTime: 637593791729340183
+  - {fileID: -4223039722647926456}
+  stringsBankWriteTime: 637593831015510572
   cacheVersion: 6
---- !u!114 &539982245270273930
+--- !u!114 &292597931567906117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: C:/Users/krist/Documents/FMOD Studio/NectAR/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 637593831015490477
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 3640640
+  Exists: 1
+--- !u!114 &801738469051483148
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -270,7 +264,47 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Try1/NectAR Audio
+  m_Name: parameter:/Music/NectAR Audio
+  m_EditorClassIdentifier: 
+  Name: NectAR Audio
+  Min: 0
+  Max: 8
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &1370808732614796652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/NectAR Audio
+  m_EditorClassIdentifier: 
+  Name: NectAR Audio
+  Min: 0
+  Max: 8
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &1871207288267569091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/NectAR Audio
   m_EditorClassIdentifier: 
   Name: NectAR Audio
   Min: 0
@@ -280,7 +314,33 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &710299912301735810
+--- !u!114 &1935143078231245647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NectAR/Music
+  m_EditorClassIdentifier: 
+  Path: event:/NectAR/Music
+  guid: c8c3d3155064ac478066f0f63541feb2
+  Banks:
+  - {fileID: 5017907107611331693}
+  - {fileID: -6633166254281705007}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 1871207288267569091}
+  - {fileID: -5041962041992451523}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 523258
+--- !u!114 &2011308852727008213
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -290,17 +350,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Try1/NectAR Audio
+  m_Name: parameter:/Music/Parameter 1
   m_EditorClassIdentifier: 
-  Name: NectAR Audio
+  Name: Parameter 1
   Min: 0
-  Max: 8
+  Max: 9
   Default: 0
   ID:
     data1: 0
     data2: 0
-  Exists: 1
---- !u!114 &952514872923416925
+  Exists: 0
+--- !u!114 &3930021391065462497
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -309,38 +369,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/NectAR Audio
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Attempt 421
   m_EditorClassIdentifier: 
-  Name: NectAR Audio
-  Min: 0
-  Max: 8
-  Default: 0
-  ID:
-    data1: 4022383153
-    data2: 3200922875
-  Exists: 1
---- !u!114 &1600266633132476139
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Try1/NectAR Audio
-  m_EditorClassIdentifier: 
-  Name: NectAR Audio
-  Min: 0
-  Max: 8
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &3727891380601582600
+  Path: event:/Attempt 421
+  guid: d1b8be6131653247bc65c5ff9bba27aa
+  Banks:
+  - {fileID: -6633166254281705007}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 43258
+--- !u!114 &4565699939379455642
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -355,13 +398,13 @@ MonoBehaviour:
   Path: C:/Users/krist/Documents/FMOD Studio/NectAR/Build/Desktop/MUSIC.bank
   Name: MUSIC
   StudioPath: bank:/MUSIC
-  lastModified: 637593791729759923
+  lastModified: 637593831015940393
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 3639360
   Exists: 1
---- !u!114 &4492844106228143467
+--- !u!114 &4884714091568289445
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -370,20 +413,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Base
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/NectAR Audio
   m_EditorClassIdentifier: 
-  Path: event:/Base
-  guid: 867bf128a6707b46939cee0ce9ba1767
-  Banks: []
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 38450
---- !u!114 &4571651389913521835
+  Name: NectAR Audio
+  Min: 0
+  Max: 8
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &5017907107611331693
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -393,18 +434,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Desktop/Master.strings.bank
+  m_Name: bank:/Master.bank
   m_EditorClassIdentifier: 
-  Path: C:/Users/krist/Documents/FMOD Studio/NectAR/Build/Desktop/Master.strings.bank
-  Name: Desktop/Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 637593777503040025
+  Path: C:/Users/krist/Documents/FMOD Studio/NectAR/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 637593810200189979
   LoadResult: 0
   FileSizes:
-  - Name: 
-    Value: 926
+  - Name: Desktop
+    Value: 3640192
   Exists: 1
---- !u!114 &5291401970253093205
+--- !u!114 &5332539655274214725
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -414,7 +455,68 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/NectAR Audio
+  m_Name: parameter:/Music/NectAR Audio
+  m_EditorClassIdentifier: 
+  Name: NectAR Audio
+  Min: 0
+  Max: 8
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &5355281267812699666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/NectAR Audio
+  m_EditorClassIdentifier: 
+  Name: NectAR Audio
+  Min: 0
+  Max: 8
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &6452270608101983198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: C:/Users/krist/Documents/FMOD Studio/NectAR/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 637593810200219965
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 994
+  Exists: 1
+--- !u!114 &7112347530282580289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/NectAR Audio
   m_EditorClassIdentifier: 
   Name: NectAR Audio
   Min: 0
@@ -424,67 +526,7 @@ MonoBehaviour:
     data1: 4022383153
     data2: 3200922875
   Exists: 0
---- !u!114 &6749553286553729151
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Music/NectAR Audio
-  m_EditorClassIdentifier: 
-  Name: NectAR Audio
-  Min: 0
-  Max: 8
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &6933786057810485614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Try1/NectAR Audio
-  m_EditorClassIdentifier: 
-  Name: NectAR Audio
-  Min: 0
-  Max: 8
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
---- !u!114 &7993922288679602357
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Music/NectAR Audio
-  m_EditorClassIdentifier: 
-  Name: NectAR Audio
-  Min: 0
-  Max: 8
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &8258213710498383159
+--- !u!114 &7985412850813417206
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -494,16 +536,58 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Try1
+  m_Name: event:/NectAR/Music
   m_EditorClassIdentifier: 
-  Path: event:/Try1
+  Path: event:/NectAR/Music
   guid: c8c3d3155064ac478066f0f63541feb2
-  Banks: []
+  Banks:
+  - {fileID: 292597931567906117}
+  - {fileID: 4565699939379455642}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 1600266633132476139}
+  - {fileID: -410175861725776307}
   MinDistance: 0
   MaxDistance: 0
   Length: 523258
+--- !u!114 &8619228612620471611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/Parameter 1
+  m_EditorClassIdentifier: 
+  Name: Parameter 1
+  Min: 0
+  Max: 9
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &8882753107606877261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/NectAR Audio
+  m_EditorClassIdentifier: 
+  Name: NectAR Audio
+  Min: 0
+  Max: 8
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
