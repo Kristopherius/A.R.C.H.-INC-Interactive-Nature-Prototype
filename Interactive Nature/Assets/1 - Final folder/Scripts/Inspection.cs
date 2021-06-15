@@ -38,13 +38,24 @@ public class Inspection : MonoBehaviour
     public void ChangeObject(GameObject plantToRotate)
     {
         myPlant = plantToRotate;
+        switchOnRender();
         initialRotation = myPlant.transform.rotation;
         DeleteChild();
-        if(myPlant != null)
+        
+    }
+
+    void switchOnRender()
+    {
+        GameObject plant = null;
+        if (transform.childCount > 0)
         {
-            for(int i = 0; i< myPlant.GetComponentsInChildren<MeshRenderer>().Length; i++)
+            plant = gameObject.transform.GetChild(0).gameObject;
+        }
+        if (plant != null)
+        {
+            for (int i = 0; i < plant.GetComponentsInChildren<MeshRenderer>().Length; i++)
             {
-                myPlant.GetComponentsInChildren<MeshRenderer>()[i].enabled = true;
+                plant.GetComponentsInChildren<MeshRenderer>()[i].enabled = true;
             }
         }
     }
@@ -142,6 +153,10 @@ public class Inspection : MonoBehaviour
 
     void Update()
     {
+        if(swiper.currentPage == 3)
+        {
+            switchOnRender();
+        }
 
         if (myPlant != null & transform.childCount <= 0)
         {

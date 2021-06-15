@@ -19,7 +19,7 @@ public class LineContainer : MonoBehaviour
             float numberOfChars = Text.Length;
             float charPerLine = 24f;
             float lines = Mathf.Ceil(numberOfChars / charPerLine);
-            int spacing = (Mathf.RoundToInt(lines) * -50) - 50;
+            int spacing = (Mathf.RoundToInt(lines) * -50);
             GetComponent<VerticalLayoutGroup>().padding.bottom = spacing;
         }
     }
