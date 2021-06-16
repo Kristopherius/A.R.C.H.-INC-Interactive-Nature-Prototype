@@ -17,9 +17,12 @@ public class InfoText : MonoBehaviour
 
     public void updateValues()
     {
+        readFromFilePath = Application.dataPath;
+        Debug.Log("dataPath : " + readFromFilePath);
         if (inspection.myPlant != null)
         {
-            readFromFilePath = Application.streamingAssetsPath + "/NectAR/" + inspection.myPlant.name + ".txt";
+            //readFromFilePath = Application.streamingAssetsPath + "/NectAR/" + inspection.myPlant.name + ".txt";
+            readFromFilePath = Application.dataPath;
 
             fileLines = File.ReadAllLines(readFromFilePath).ToList();
         }
