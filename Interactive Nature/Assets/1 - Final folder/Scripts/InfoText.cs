@@ -11,24 +11,20 @@ public class InfoText : MonoBehaviour
     public Inspection inspection;
 
     public Swiper swiper;
-    string readFromFilePath;
-    List<string> fileLines;
+
+    string[] lines;
 
 
     public void updateValues()
     {
-        readFromFilePath = Application.dataPath;
-        Debug.Log("dataPath : " + readFromFilePath);
         if (inspection.myPlant != null)
         {
-            //readFromFilePath = Application.streamingAssetsPath + "/NectAR/" + inspection.myPlant.name + ".txt";
-            readFromFilePath = Application.dataPath;
-
-            fileLines = File.ReadAllLines(readFromFilePath).ToList();
+            TextAsset fileToRead = Resources.Load<TextAsset>(inspection.myPlant.name);
+            lines = fileToRead.text.Split('\n');
         }
         
         int counter = 0;
-        foreach (string line in fileLines)
+        foreach (string line in lines)
         {
             if (line.Contains("@?!@"))
             {
