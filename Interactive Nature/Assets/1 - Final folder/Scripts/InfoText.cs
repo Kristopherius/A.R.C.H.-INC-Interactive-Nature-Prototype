@@ -14,7 +14,7 @@ public class InfoText : MonoBehaviour
 
     string[] lines;
 
-
+    //Function that takes in the file by the name of the plant just scanned or in the collection, and updates the info text in the inspection screen to match the plant.
     public void updateValues()
     {
         if (inspection.myPlant != null)

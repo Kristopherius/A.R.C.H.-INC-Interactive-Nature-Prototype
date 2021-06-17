@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HintDisabled : MonoBehaviour
 {
-    // Start is called before the first frame update
+    //Disables and enables the visibility of the instruction screen 
     public GameObject button;
     void Start()
     {

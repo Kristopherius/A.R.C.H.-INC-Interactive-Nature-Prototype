@@ -29,12 +29,15 @@ public class Inspection : MonoBehaviour
     public int counter = 0;
 
 
-
+    //Instantiate the color values for the button change
+    //It gave some errors in the past if i didnt instantiate it in the start function
     private void Start()
     {
         colorGreen = new Color32(173, 193, 120, 255);
         colorBrown = new Color32(108, 88, 76, 255);
-}
+    }
+
+    //Allows the image targets from AR view to update the plant object in the inspection screen.
     public void ChangeObject(GameObject plantToRotate)
     {
         myPlant = plantToRotate;
@@ -44,6 +47,12 @@ public class Inspection : MonoBehaviour
         
     }
 
+
+    /*
+     * Vuforia switches on/off the MeshRenderer whenever a plant is scanned or out of view
+     * which caused the plants cloned to not render which is why this function is callled whenever the plant is spawned in the Inspection screen
+     * 
+     */
     void switchOnRender()
     {
         GameObject plant = null;
@@ -59,7 +68,9 @@ public class Inspection : MonoBehaviour
             }
         }
     }
-
+    
+    //Sets the inFocus boolean to true or false - responsible for moving the ui up and down on the inspection screen
+    
     public void Focused()
     {
         if (inFocus == true)
@@ -72,6 +83,9 @@ public class Inspection : MonoBehaviour
         }
     }
 
+    // Whenever a new plant is chosen for the inspection screen it gets duplicated as a child of the InspectionManager object
+    // and this function deletes the child that is already there whenever a new plant is scanned
+    
     public void DeleteChild()
     {
         if (myPlant != null && transform.childCount > 0)
@@ -87,12 +101,14 @@ public class Inspection : MonoBehaviour
 
     }
 
+    //function that lerps the ui from it's current position to a set pointA position
+
     void lerpUI(Transform pointA)
     {
         speed = 10 * Time.deltaTime;
         UIToMove.gameObject.transform.position = Vector3.Lerp(UIToMove.gameObject.transform.position, pointA.position, speed);
     }
-
+    //using the fixedUpdate function for a smooth movement of the UI based on the inFocus movement
     void FixedUpdate()
     {
         buttonScale = new Vector3(1, 1, 1);
@@ -119,14 +135,15 @@ public class Inspection : MonoBehaviour
             UIToMove.GetComponentInChildren<Image>().color = colorGreen;
         }
     }
-
+    
     void Update()
     {
+        //if the user is looking at the inspection screen the app will have it's mesh renderer switched on
         if(swiper.currentPage == 3)
         {
             switchOnRender();
         }
-
+        //creates a child of the plant that was just scanned
         if (myPlant != null & transform.childCount <= 0)
         {
             Instantiate(myPlant, transform);
@@ -136,6 +153,7 @@ public class Inspection : MonoBehaviour
             {
                 foreach (Transform child in transform)
                 {
+                    //adds the moveByTouch script to the inspected plant for allowing moving the plant
                     if (child.GetComponent<MoveByTouch>() == null)
                     {
                         child.gameObject.SetActive(true);
@@ -153,6 +171,7 @@ public class Inspection : MonoBehaviour
         {
             if (inFocus)
             {
+                //switches of the swiping and switches on the moving of the plant
                 if (transform.GetChild(0).GetComponent<MoveByTouch>() != null)
                 {
                     swiper.enabled = false;
@@ -166,10 +185,9 @@ public class Inspection : MonoBehaviour
             }
         }
     }
-
+    //allows for reseting the position of the plant
     public void Reset()
     {
-        
         if(transform.childCount > 0)
         {
             transform.GetChild(0).transform.rotation = initialRotation;

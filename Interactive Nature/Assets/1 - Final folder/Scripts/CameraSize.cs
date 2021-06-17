@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class CameraSize : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    /**
+     
+    Makes the AR Camera scaled to the size of the users screen
+     
+     */
     RectTransform rectT;
     void Start()
     {
-        //Debug.Log("Camera Testing - Screen Width " + Screen.width);
-        //Debug.Log("Camera Testing - Screen Height " + Screen.height);
         rectT = transform.GetComponent<RectTransform>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         rectT.sizeDelta = new Vector2(Screen.width, Screen.height);

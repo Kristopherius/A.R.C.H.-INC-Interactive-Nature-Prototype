@@ -17,10 +17,7 @@ public class SaveSystem : MonoBehaviour
     {
         scanCheck = FindObjectOfType<Inspection>();
         swiper = FindObjectOfType<Swiper>();
-
-        //PrefReader();
         CollectionCheck();
-        //DeletePlayerPrefs();
     }
 
     // Update is called once per frame
@@ -43,6 +40,8 @@ public class SaveSystem : MonoBehaviour
         }
     }
 
+    //Function that reads through the current PlayerPrefs in case the developer needs to check them
+
     void PrefReader()
     {
         for (int i = 0; i < PlayerPrefs.GetInt("LastValue"); i++)
@@ -50,6 +49,8 @@ public class SaveSystem : MonoBehaviour
             Debug.Log(i + " - " + (PlayerPrefs.GetString(i.ToString())));
         }
     }
+
+    //Function that checks the current player prefs and updates the collection screen with the plants that are currently "owned"
 
     public void CollectionCheck()
     {
@@ -88,17 +89,20 @@ public class SaveSystem : MonoBehaviour
         }        
     }
 
+    //Deletes all player prefs
     public void DeletePlayerPrefs()
     {
         PlayerPrefs.DeleteAll();
         PlayerPrefs.SetInt("LastValue", 0);
         CollectionCheck();
     }
-
+    //Sets the Hint playerpref to on or off so it doesnt show up with every app launch
     public void hintDisabled()
     {
         PlayerPrefs.SetInt("Hint",1);
     }
+
+    //Sets the PlayerPrefs based on the current scanned plant
     void PlayerPrefSetter(GameObject Plant)
     {
         if (!PlayerPrefs.HasKey("LastValue"))
