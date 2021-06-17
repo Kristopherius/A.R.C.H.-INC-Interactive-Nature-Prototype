@@ -10,6 +10,9 @@ public class LineContainer : MonoBehaviour
     {
         swiper = FindObjectOfType<Swiper>();
     }
+
+    //resizing the containers of information text dependent on the size of the text
+
     void Update()
     {
         if(swiper.currentPage == 3)

@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class MoveByTouch : MonoBehaviour
 {
-
+    
     private float rotationRate = 0.1f;
 
     public float zoomMin = 0.2f;
@@ -19,6 +19,7 @@ public class MoveByTouch : MonoBehaviour
 
     void Update()
     {
+        //move the plant based on the touch input on the inspection screen
         if (Input.touchCount == 2)
         {
             Touch touch0 = Input.GetTouch(0);
@@ -31,9 +32,6 @@ public class MoveByTouch : MonoBehaviour
             float currMagnitude = (touch0.position - touch1.position).magnitude;
 
             float difference = currMagnitude - prevMagnitude;
-
-            //Debug.Log("Zoom size" + difference);
-
             zoom(difference * 0.01f);
         }
         else if (Input.touchCount == 1)
@@ -49,7 +47,6 @@ public class MoveByTouch : MonoBehaviour
                 }
                 else if (touch.phase == TouchPhase.Moved)
                 {
-                    //Debug.Log("Touch phase Moved");
                     transform.Rotate(touch.deltaPosition.y * rotationRate, -touch.deltaPosition.x * rotationRate, 0, Space.World);
                 }
                 else if (touch.phase == TouchPhase.Ended)
@@ -60,6 +57,8 @@ public class MoveByTouch : MonoBehaviour
         }
 
     }
+
+    //increase the orthographicSize of the main camera when inspecting a plant based on an increment
 
     void zoom(float increment)
     {

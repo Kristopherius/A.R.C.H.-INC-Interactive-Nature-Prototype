@@ -12,13 +12,18 @@ public class Swiper : MonoBehaviour, IDragHandler, IEndDragHandler
     public int currentPage = 2;
     public Vector3 inspectionPanel;
 
-    // Start is called before the first frame update
+
+    /*
+        Used the script from the tutorial of "Press Start" youtube channel
+        https://www.youtube.com/watch?v=rjFgThTjLso
+     */
+
     void Start()
     {
         panelLocation = transform.position;
         inspectionPanel = new Vector3(-540f, Screen.height/2f, 0f);
     }
-
+    //added a function that allows the user to move directly to the inspection screen when tapping on a plant in the collection screen.
     public void moveToInspect()
     {
         StartCoroutine(SmoothMove(transform.position, inspectionPanel, easing));
